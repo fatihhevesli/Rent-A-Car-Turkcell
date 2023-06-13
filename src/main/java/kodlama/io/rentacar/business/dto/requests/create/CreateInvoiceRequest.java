@@ -1,19 +1,24 @@
 package kodlama.io.rentacar.business.dto.requests.create;
 
-import kodlama.io.rentacar.business.dto.requests.PaymentRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateRentalRequest {
-    private int carId;
+public class CreateInvoiceRequest {
+    private String cardHolder;
+    private String modelName;
+    private String brandName;
+    private String plate;
+    private int modelYear;
     private double dailyPrice;
     private int rentedForDays;
-    // Kart bilgileri
-    private PaymentRequest paymentRequest;
+    private LocalDateTime rentedAt;
 }
+
